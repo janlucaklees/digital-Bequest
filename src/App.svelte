@@ -1,13 +1,13 @@
 <script>
 	import logo from './assets/digital-bequest.svg'
-	import Counter from './lib/Counter.svelte'
+	import QrCode from './components/QrCode.svelte'
 </script>
 
 <main>
 	<img src={logo} alt="Digital Bequest Logo" />
 	<h1>Digital Bequest</h1>
 
-	<Counter />
+	<QrCode data={ window.location.href } />
 </main>
 
 <style>
