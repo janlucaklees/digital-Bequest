@@ -19,6 +19,12 @@ html {
 	box-sizing: inherit;
 }
 
+.app-name {
+	text-transform: uppercase;
+	font-weight: 200;
+	color: #000000;
+}
+
 .container {
 	max-width: 80rem;
 }

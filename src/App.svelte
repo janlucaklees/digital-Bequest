@@ -14,8 +14,16 @@
 <main class="wrapper">
 
 	<div class="container">
-		<img src={logo} alt="Digital Bequest Logo" />
-		<h1>Digital Bequest</h1>
+
+		<img
+			src={logo}
+			alt="Digital Bequest Logo" />
+
+		<h1
+			class="app-name">
+			Digital Bequest
+		</h1>
+
 	</div>
 
 	{#if hasCipher }
@@ -33,11 +41,5 @@
 
 	img {
 		margin-bottom: 3.5rem;
-	}
-
-	h1 {
-		text-transform: uppercase;
-		font-weight: 200;
-		color: #000000;
 	}
 </style>
