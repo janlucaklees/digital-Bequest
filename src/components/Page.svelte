@@ -3,13 +3,17 @@
 	export let message;
 	export let qrCodeData;
 
+	export let page;
+
 	// Imports
 	import QrCode from './QrCode.svelte';
 	import logo from '../assets/digital-bequest.svg';
 
 </script>
 
-<div class="page" id="page">
+<div
+	class="page"
+	bind:this={page}>
 
 	<p class="message">
 		{ message }

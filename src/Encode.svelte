@@ -13,7 +13,7 @@
 	$: cipher = encodeMessage(credentials, password);
 
 	function downloadPDF() {
-		html2pdf(document.getElementById("page"));
+		html2pdf(page);
 	}
 
 </script>
@@ -66,6 +66,7 @@
 
 	<div class="preview">
 		<Page
+			bind:page={page}
 	 		message={ message }
 	 		qrCodeData={ `${window.location.href}?cipher=${encodeURIComponent(cipher)}` } />
 	</div>
