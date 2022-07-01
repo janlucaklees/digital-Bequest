@@ -1,1 +1,61 @@
 @import 'milligram';
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('./assets/font/Roboto-Regular.woff2') format('woff2'),
+	url('./assets/font/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('./assets/font/Roboto-Light.woff2') format('woff2'),
+	url('./assets/font/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('./assets/font/Roboto-Thin.woff2') format('woff2'),
+	url('./assets/font/Roboto-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+// Overrides
+.container {
+	max-width: 80rem;
+}
+
+.wrapper > .container {
+	padding-bottom: 4.5rem;
+	padding-top: 4.5rem;
+}
+
+:root {
+	--primary-color: #274472;
+	--font-color: #000000;
+}
+
+html {
+	box-sizing: border-box;
+
+	color: var(--font-color);
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+

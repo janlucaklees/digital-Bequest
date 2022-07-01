@@ -7,16 +7,34 @@
 
 	// Code
 	let password = '';
+	let credentials = '';
 
-	$: message = decodeMessage(cipher, password);
+	$: credentials = decodeMessage(cipher, password);
 
 </script>
 
-<main>
-	<input type="password" bind:value={ password }>
+<div class="container">
 
-	{ message }
-</main>
+	<h3>Sorry for your loss.</h3>
+
+	<p>As you are here, it means you must have lost someone. But they left you something. Enter the password that they have given to you to retrieve it.</p>
+
+	<label for="password">
+		Enter the Password
+	</label>
+
+	<input
+		id="password"
+		type="password"
+		bind:value={ password } />
+
+	<label>
+		Here is what was left to you
+	</label>
+
+	<pre><code>{ credentials }</code></pre>
+
+</div>
 
 <style>
 
