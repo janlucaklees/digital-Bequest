@@ -1,18 +1,24 @@
 <script>
-	import logo from './assets/digital-bequest.svg'
-	import QrCode from './components/QrCode.svelte'
+	import logo from './assets/digital-bequest.svg';
+	import Decode from './Decode.svelte';
+	import Encode from './Encode.svelte';
 
-	let message = '';
 
+	const queryParams = new URLSearchParams(window.location.search);
+	const cipher = queryParams.get('cipher');
+	const hasCipher = cipher !== null;
 </script>
 
 <main>
 	<img src={logo} alt="Digital Bequest Logo" />
 	<h1>Digital Bequest</h1>
 
-	<textarea type="text" bind:value={message}></textarea>
+	{#if hasCipher }
+		<Decode { cipher } />
+	{:else}
+		<Encode />
+	{/if}
 
-	<QrCode data={ `${window.location.href}?message=${encodeURIComponent(message)}` } />
 </main>
 
 <style>
