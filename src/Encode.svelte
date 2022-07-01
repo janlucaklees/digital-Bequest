@@ -1,5 +1,6 @@
 <script>
-	import QrCode from './components/QrCode.svelte';
+	import html2pdf from 'html2pdf.js';
+	import Page from './components/Page.svelte';
 	import { encodeMessage }  from './lib/message-functions';
 
 	let message = 'In the event of my death, scan the QR Code to retrive my important credentials.';
@@ -7,7 +8,13 @@
 	let password = '';
 	let passwordRepetition = '';
 
+	let page;
+
 	$: cipher = encodeMessage(credentials, password);
+
+	function downloadPDF() {
+		html2pdf(page);
+	}
 
 </script>
 
@@ -18,7 +25,7 @@
 	<p>Leave a Message for your loved ones</p>
 
 	<textarea
-		rows="4"
+		rows="12"
 		bind:value={message} />
 
 </div>
@@ -37,7 +44,7 @@
 
 <div class="container">
 
-	<h3>3. Set your Password</h3>
+	<h3>3. Your Password</h3>
 
 	<p>Protect your credentials with a unique password. Give this password to your loved ones so that they can access your credentials in the event of your death.</p>
 
@@ -55,13 +62,21 @@
 
 <div class="container">
 
-	<h3>4. Print the PDF</h3>
+	<h3>4. Your PDF</h3>
 
-	<div class="page">
-		{ message }
+	<div class="preview">
+		<Page
+			bind:page={page}
+	 		message={ message }
+	 		qrCodeData={ `${window.location.href}?cipher=${encodeURIComponent(cipher)}` } />
+	</div>
 
-		<QrCode
-			data={ `${window.location.href}?cipher=${encodeURIComponent(cipher)}` } />
+	<div class="align-center">
+		<button
+			class="cta"
+			on:click={downloadPDF}>
+			Download PDF
+		</button>
 	</div>
 
 </div>
@@ -71,6 +86,27 @@
 		height: auto;
 		min-height: 8rem;
 		resize: vertical;
+	}
+
+	.preview {
+		height: calc(297mm * 0.75);
+
+		overflow: visible;
+
+		transform: scale(.75);
+		transform-origin: top center;
+
+		margin-bottom: 6rem;
+	}
+
+	.align-center {
+		display: flex;
+		justify-content: center;
+	}
+
+	.cta {
+		font-size: 2rem;
+		height: 3.45em;
 	}
 </style>
 
