@@ -10,9 +10,7 @@
 	// Code
 	let canvas;
 
-	onMount(() => {
-		QRCode.toCanvas(canvas, data);
-	});
+	$: canvas && QRCode.toCanvas(canvas, data);
 
 </script>
 

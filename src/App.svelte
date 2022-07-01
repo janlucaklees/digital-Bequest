@@ -1,13 +1,18 @@
 <script>
 	import logo from './assets/digital-bequest.svg'
 	import QrCode from './components/QrCode.svelte'
+
+	let message;
+
 </script>
 
 <main>
 	<img src={logo} alt="Digital Bequest Logo" />
 	<h1>Digital Bequest</h1>
 
-	<QrCode data={ window.location.href } />
+	<textarea type="text" bind:value={message}></textarea>
+
+	<QrCode data={ `${window.location.href}?message=${message}` } />
 </main>
 
 <style>
