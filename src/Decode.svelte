@@ -28,11 +28,11 @@
 		type="password"
 		bind:value={ password } />
 
-	<label>
+	<label for="credentials">
 		Here is what was left to you
 	</label>
 
-	<pre><code>{ credentials }</code></pre>
+	<pre id="credentials"><code>{ credentials }</code></pre>
 
 </div>
 
