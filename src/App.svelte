@@ -1,29 +1,48 @@
 <script>
-	import logo from './assets/svelte.png'
+	import logo from './assets/digital-bequest.svg'
 	import Counter from './lib/Counter.svelte'
 </script>
 
 <main>
-	<img src={logo} alt="Svelte Logo" />
-	<h1>Hello world!</h1>
+	<img src={logo} alt="Digital Bequest Logo" />
+	<h1>Digital Bequest</h1>
 
 	<Counter />
-
-	<p>
-	 Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-	 apps.
-	</p>
-
-	<p>
-		Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-		the officially supported framework, also powered by Vite!
-	</p>
 </main>
 
 <style>
 	:root {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+		--primary-color: #274472;
+		--font-color: #000000;
+	}
+
+	html {
+		box-sizing: border-box;
+		font-size: 16px;
+		color: var(--font-color);
+
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
 	}
 
 	main {
@@ -38,7 +57,7 @@
 	}
 
 	h1 {
-		color: #ff3e00;
+		color: var(--font-color);
 		text-transform: uppercase;
 		font-size: 4rem;
 		font-weight: 100;
