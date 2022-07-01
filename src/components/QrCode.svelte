@@ -19,7 +19,7 @@
 
 <main>
 	<canvas
-	 bind:this={canvas} >
+	 bind:this={ canvas } >
 	</canvas>
 </main>
 
