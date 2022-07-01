@@ -2,7 +2,7 @@
 	import logo from './assets/digital-bequest.svg'
 	import QrCode from './components/QrCode.svelte'
 
-	let message;
+	let message = '';
 
 </script>
 
@@ -12,7 +12,7 @@
 
 	<textarea type="text" bind:value={message}></textarea>
 
-	<QrCode data={ `${window.location.href}?message=${message}` } />
+	<QrCode data={ `${window.location.href}?message=${encodeURIComponent(message)}` } />
 </main>
 
 <style>

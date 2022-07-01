@@ -10,7 +10,10 @@
 	// Code
 	let canvas;
 
-	$: canvas && QRCode.toCanvas(canvas, data);
+	$: canvas && QRCode.toCanvas(canvas, data, {
+		errorCorrectionLevel: 'H',
+	});
+
 
 </script>
 
