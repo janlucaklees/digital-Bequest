@@ -1,4 +1,4 @@
-<script>
+<script  lang="ts">
 	import html2pdf from 'html2pdf.js';
 	import Page from './components/Page.svelte';
 	import { encodeMessage }  from './lib/message-functions';

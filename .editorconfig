@@ -11,4 +11,3 @@ trim_trailing_whitespace = true
 
 [{*.json,*.yml}]
 indent_style = space
-

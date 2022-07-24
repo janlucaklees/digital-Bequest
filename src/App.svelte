@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import logo from './assets/digital-bequest.svg';
 	import Decode from './Decode.svelte';
 	import Encode from './Encode.svelte';
