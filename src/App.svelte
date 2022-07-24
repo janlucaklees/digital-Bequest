@@ -1,8 +1,17 @@
 <script lang="ts">
+	//
+	// Props
+
+	//
+	// Imports
+	import i18n from './i18n';
+
 	import logo from './assets/digital-bequest.svg';
 	import Decode from './Decode.svelte';
 	import Encode from './Encode.svelte';
 
+	//
+	// Code
 
 	// Retrieve possible cipher from URL
 	const queryParams = new URLSearchParams(window.location.search);
@@ -17,11 +26,11 @@
 
 		<img
 			src={logo}
-			alt="Digital Bequest Logo" />
+			alt={$i18n.t('app.logo.alt')} />
 
 		<h1
 			class="app-name">
-			Digital Bequest
+			{$i18n.t('app.name')}
 		</h1>
 
 	</div>

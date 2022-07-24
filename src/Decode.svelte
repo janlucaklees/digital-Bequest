@@ -1,10 +1,15 @@
 <script lang="ts">
+	//
 	// Props
 	export let cipher
 
+	//
 	// Imports
+	import i18n from './i18n';
+
 	import { decodeMessage }  from './lib/message-functions';
 
+	//
 	// Code
 	let password = '';
 	let credentials = '';
@@ -15,21 +20,22 @@
 
 <div class="container">
 
-	<h3>Sorry for your loss.</h3>
+	<h3>{$i18n.t('decode.title')}</h3>
 
-	<p>As you are here, it means you must have lost someone. But they left you something. Enter the password that they have given to you to retrieve it.</p>
+	<p>{$i18n.t('decode.copy')}</p>
 
 	<label for="password">
-		Enter the Password
+		{$i18n.t('decode.fields.password.label')}
 	</label>
 
 	<input
 		id="password"
+		name="password"
 		type="password"
 		bind:value={ password } />
 
 	<label for="credentials">
-		Here is what was left to you
+		{$i18n.t('decode.message.title')}
 	</label>
 
 	<pre id="credentials"><code>{ credentials }</code></pre>

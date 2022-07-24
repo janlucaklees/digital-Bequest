@@ -27,8 +27,12 @@
   "dependencies": {
     "crypto-js": "^4.1.1",
     "html2pdf.js": "^0.10.1",
+    "i18next": "^21.8.14",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.1",
     "milligram": "^1.4.1",
     "qrcode": "^1.5.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "svelte-i18next": "^1.2.2"
   }
 }

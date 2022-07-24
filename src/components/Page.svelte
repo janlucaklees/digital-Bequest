@@ -1,13 +1,20 @@
 <script lang="ts">
+	//
 	// Props
 	export let message;
 	export let qrCodeData;
 
 	export let page;
 
+	//
 	// Imports
+	import i18n from '../i18n';
+
 	import QrCode from './QrCode.svelte';
 	import logo from '../assets/digital-bequest.svg';
+
+	//
+	// Code
 
 </script>
 
@@ -26,7 +33,7 @@
 
 		<p>
 			<small>
-				Scan the QR Code and unlock what they left you.
+				{$i18n.t('page.qr-code.hint')}
 			</small>
 		</p>
 
@@ -37,15 +44,15 @@
 		<img
 			class="logo"
 			src={logo}
-			alt="Digital Bequest Logo" />
+			alt="{$i18n.t('app.logo.alt')}" />
 
 		<h1 class="app-name">
-			Digital Bequest
+			{$i18n.t('app.name')}
 		</h1>
 
 		<p class="credits">
 			<small>
-				Created with DIGITAL BEQUEST. Visit { window.location.href } to generate your own digital bequest.
+				{$i18n.t('page.footer.message', { url: window.location.href })}
 			</small>
 		</p>
 	</div>
