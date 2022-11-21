@@ -93,7 +93,7 @@
 		display: grid;
 		grid-template:
 			"logo  title"   8mm
-			"blank credits" 6mm
+			"blank credits" auto
 		 / 8mm   auto;
 		align-items: flex-end;
 		align-content: flex-end;
@@ -118,8 +118,11 @@
 	.credits {
 		grid-area: credits;
 
+		margin-top: .8rem;
 		margin-bottom: 0;
 		margin-left: .1em;
+
+		line-height: .8em;
 	}
 
 </style>
