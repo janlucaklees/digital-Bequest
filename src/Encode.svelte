@@ -83,7 +83,7 @@
 		<Page
 			bind:page={page}
 	 		message={ message }
-	 		qrCodeData={ `${window.location.href}?cipher=${encodeURIComponent(cipher)}` } />
+	 		qrCodeData={ `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(cipher)}` } />
 	</div>
 
 	<div class="align-center">

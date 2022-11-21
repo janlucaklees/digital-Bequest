@@ -15,7 +15,7 @@
 
 	// Retrieve possible cipher from URL
 	const queryParams = new URLSearchParams(window.location.search);
-	const cipher = queryParams.get('cipher');
+	const cipher = queryParams.get('c');
 	const hasCipher = cipher !== null;
 
 </script>
