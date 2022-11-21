@@ -66,7 +66,7 @@
 		type="password"
 		bind:value={password} />
 
-	<label for="password-repeat">{$i18n.t('encode.steps.3.fields.password.label')}</label>
+	<label for="password-repeat">{$i18n.t('encode.steps.3.fields.password-repeat.label')}</label>
 	<input
 		id="password-repeat"
 		name="password-repeat"
