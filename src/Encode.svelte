@@ -82,10 +82,12 @@
 	</h3>
 
 	<div class="preview dont-interfere-on-print">
-		<Page
-			bind:page={page}
-	 		message={ message }
-	 		qrCodeData={ `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(cipher)}` } />
+		<div class="scaler dont-interfere-on-print">
+			<Page
+				bind:page={page}
+				message={ message }
+				qrCodeData={ `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(cipher)}` } />
+		</div>
 	</div>
 
 	<div class="align-center hide-on-print">
@@ -106,14 +108,26 @@
 	}
 
 	.preview {
+		position: relative;
+
+		width: calc(210mm * 0.75);
 		height: calc(297mm * 0.75);
 
-		overflow: visible;
+		margin: 0 auto 6rem;
+
+		overflow: hidden;
+
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+	}
+	.scaler {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 
 		transform: scale(.75);
-		transform-origin: top center;
-
-		margin-bottom: 6rem;
+		transform-origin: top left;
 	}
 
 	.align-center {
