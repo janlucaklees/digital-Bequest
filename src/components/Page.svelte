@@ -125,5 +125,21 @@
 		line-height: .8em;
 	}
 
+	@media print {
+
+		@page {
+			size: A4;
+		}
+
+		.page {
+			width: 100vw;
+			height: 100vh;
+
+			box-shadow: unset;
+
+			overflow: hidden;
+		}
+
+	}
 </style>
 

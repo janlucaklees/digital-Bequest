@@ -1,5 +1,6 @@
 @import './scss/variables.scss';
 @import './scss/font.scss';
+@import './scss/print.scss';
 
 @import 'milligram/src/milligram.sass';
 
@@ -39,3 +40,20 @@ img {
 	height: auto;
 }
 
+@media print {
+
+	.hide-on-print {
+		display: none !important;
+	}
+
+	.dont-interfere-on-print {
+		width: unset !important;
+		height: unset !important;
+
+		margin: unset !important;
+		padding: unset !important;
+
+		transform: unset !important;
+	}
+
+}

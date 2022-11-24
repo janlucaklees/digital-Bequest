@@ -29,7 +29,7 @@
 
 </script>
 
-<div class="container">
+<div class="container hide-on-print">
 
 	<h3>{$i18n.t('encode.steps.1.title')}</h3>
 
@@ -41,7 +41,7 @@
 
 </div>
 
-<div class="container">
+<div class="container hide-on-print">
 
 	<h3>{$i18n.t('encode.steps.2.title')}</h3>
 
@@ -53,7 +53,7 @@
 
 </div>
 
-<div class="container">
+<div class="container hide-on-print">
 
 	<h3>{$i18n.t('encode.steps.3.title')}</h3>
 
@@ -75,18 +75,20 @@
 
 </div>
 
-<div class="container">
+<div class="container dont-interfere-on-print">
 
-	<h3>{$i18n.t('encode.steps.4.title')}</h3>
+	<h3 class="hide-on-print">
+		{$i18n.t('encode.steps.4.title')}
+	</h3>
 
-	<div class="preview">
+	<div class="preview dont-interfere-on-print">
 		<Page
 			bind:page={page}
 	 		message={ message }
 	 		qrCodeData={ `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(cipher)}` } />
 	</div>
 
-	<div class="align-center">
+	<div class="align-center hide-on-print">
 		<button
 			class="cta"
 			on:click={downloadPDF}>

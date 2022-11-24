@@ -22,7 +22,7 @@
 
 <main class="wrapper">
 
-	<div class="container">
+	<div class="container hide-on-print">
 
 		<img
 			src={logo}

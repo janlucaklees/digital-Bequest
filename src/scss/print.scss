@@ -1,0 +1,19 @@
+@media print {
+
+	.hide-on-print {
+		display: none !important;
+	}
+
+	html,
+	body,
+	.dont-interfere-on-print {
+		width: unset !important;
+		height: unset !important;
+
+		margin: unset !important;
+		padding: unset !important;
+
+		transform: unset !important;
+	}
+
+}
