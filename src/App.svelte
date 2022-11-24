@@ -33,6 +33,11 @@
 			{$i18n.t('app.name')}
 		</h1>
 
+		<p
+			class="slogan">
+			{$i18n.t('app.slogan')}
+		</p>
+
 	</div>
 
 	{#if hasCipher }
