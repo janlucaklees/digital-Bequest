@@ -14,7 +14,7 @@
 
 	//
 	// Code
-	let message = 'In the event of my death, scan the QR Code to retrive my important credentials.';
+	let message = 'In the event of my death, scan the QR Code to retrieve my important credentials.';
 	let credentials = '';
 	let password = '';
 	let passwordRepetition = '';
