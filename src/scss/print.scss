@@ -7,6 +7,12 @@
 	html,
 	body,
 	.dont-interfere-on-print {
+		position: unset !important;
+		top: unset !important;
+		right: unset !important;
+		bottom: unset !important;
+		left: unset !important;
+
 		width: unset !important;
 		height: unset !important;
 
@@ -14,6 +20,8 @@
 		padding: unset !important;
 
 		transform: unset !important;
+
+		box-shadow: unset !important;
 	}
 
 }
