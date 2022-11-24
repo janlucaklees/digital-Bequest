@@ -8,55 +8,43 @@
 
 	//
 	// Imports
-	import i18n from '../i18n';
+	import i18n from "../i18n";
 
-	import QrCode from './QrCode.svelte';
-	import logo from '../assets/digital-bequest.svg';
+	import QrCode from "./QrCode.svelte";
+	import logo from "../assets/digital-bequest.svg";
 
 	//
 	// Code
-
 </script>
 
-<div
-	class="page"
-	bind:this={page}>
-
+<div class="page" bind:this={page}>
 	<p class="message">
-		{ message }
+		{message}
 	</p>
 
 	<div class="qr-code">
-
-		<QrCode
-			data={ qrCodeData } />
+		<QrCode data={qrCodeData} />
 
 		<p>
 			<small>
-				{$i18n.t('page.qr-code.hint')}
+				{$i18n.t("page.qr-code.hint")}
 			</small>
 		</p>
-
 	</div>
 
 	<div class="footer">
-
-		<img
-			class="logo"
-			src={logo}
-			alt="{$i18n.t('app.logo.alt')}" />
+		<img class="logo" src={logo} alt={$i18n.t("app.logo.alt")} />
 
 		<h1 class="app-name">
-			{$i18n.t('app.name')}
+			{$i18n.t("app.name")}
 		</h1>
 
 		<p class="credits">
 			<small>
-				{$i18n.t('page.footer.message', { url: window.location.href })}
+				{$i18n.t("page.footer.message", { url: window.location.href })}
 			</small>
 		</p>
 	</div>
-
 </div>
 
 <style>
@@ -92,9 +80,9 @@
 	.footer {
 		display: grid;
 		grid-template:
-			"logo  title"   8mm
+			"logo  title" 8mm
 			"blank credits" auto
-		 / 8mm   auto;
+			/ 8mm auto;
 		align-items: flex-end;
 		align-content: flex-end;
 
@@ -110,7 +98,7 @@
 	.app-name {
 		grid-area: title;
 
-		margin-bottom: -.1em;
+		margin-bottom: -0.1em;
 
 		font-size: 6mm;
 	}
@@ -118,15 +106,14 @@
 	.credits {
 		grid-area: credits;
 
-		margin-top: .8rem;
+		margin-top: 0.8rem;
 		margin-bottom: 0;
-		margin-left: .1em;
+		margin-left: 0.1em;
 
-		line-height: .8em;
+		line-height: 0.8em;
 	}
 
 	@media print {
-
 		@page {
 			size: A4;
 		}
@@ -139,7 +126,5 @@
 
 			overflow: hidden;
 		}
-
 	}
 </style>
-

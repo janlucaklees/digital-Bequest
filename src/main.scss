@@ -16,7 +16,9 @@ html {
 	color: var(--font-color);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
@@ -30,7 +32,7 @@ html {
 	max-width: 80rem;
 }
 
-.wrapper > .container {
+.wrapper>.container {
 	padding-bottom: 4.5rem;
 	padding-top: 4.5rem;
 }

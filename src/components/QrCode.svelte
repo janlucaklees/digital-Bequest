@@ -3,23 +3,19 @@
 	export let data;
 
 	// Imports
-	import { onMount } from 'svelte';
-	import QRCode from 'qrcode';
-
+	import { onMount } from "svelte";
+	import QRCode from "qrcode";
 
 	// Code
 	let canvas;
 
-	$: canvas && QRCode.toCanvas(canvas, data, {
-		errorCorrectionLevel: 'H',
-	});
-
-
+	$: canvas &&
+		QRCode.toCanvas(canvas, data, {
+			errorCorrectionLevel: "H",
+		});
 </script>
 
-<canvas
-	bind:this={ canvas } >
-</canvas>
+<canvas bind:this={canvas} />
 
 <style>
 	canvas {
@@ -32,4 +28,3 @@
 		aspect-ratio: 1 / 1;
 	}
 </style>
-
